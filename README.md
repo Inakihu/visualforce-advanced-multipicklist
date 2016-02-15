@@ -9,7 +9,10 @@ Advanced Multipicklist is a free, open-source Force.com library, that provides u
 This component can be used as an advanced, highly configurable (by developer and user) replacement of <apex:selectOption> and fields into Standard Page Layouts.
 
 > ![Examples One Field.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/Only_One_Field.png)
-> ![Examples One Field two Source Picklist Fields.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/Only_One_Field.png)
+> ![Examples One Field two Source Picklist Fields.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/One_Field_Two_Source_Picklist_Fields.
+png)
+> ![Examples One Field two Source Picklist Fields Example 001.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/One_Field_Two_Picklist_example_01.png.png)
+> ![Examples One Field two Source Picklist Fields Example 002.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/One_Field_Two_Picklist_example_02.png.png)
 
 ## Features: ##
 
@@ -30,7 +33,7 @@ you enough information to get started.
 		</apex:page>
 
 	RESULT:
-	> ![Result One Field.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/Only_One_Field_result.png)
+> ![Result One Field.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/Only_One_Field_result.png)
 
 		<apex:page standardController="Contact">
     		<c:IHU_advancedMultiPicklist objectName="Contact"
@@ -42,7 +45,7 @@ you enough information to get started.
 		</apex:page>
 
 	RESULT
-	> ![Results Two Fields.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/One_Field_Two_Picklist_Result.png)
+> ![Results Two Fields.](https://github.com/Inakihu/visualforce-advanced-multipicklist/blob/master/resources/One_Field_Two_Picklist_Result.png)
 
 ## Known Issues/Todos ##
 
