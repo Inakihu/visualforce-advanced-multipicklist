@@ -1,0 +1,45 @@
+<apex:component controller="IHU_AdvancedMultiPicklist_Controller" allowDml="true">
+	<apex:attribute name="field" assignTo="{!fieldParam}" type="String" required="true" description="" />
+    <apex:attribute name="sourceFields" assignTo="{!sourceFieldsParam}" type="String" required="false" description="" />
+    <apex:attribute name="keyField" assignTo="{!keyFieldParam}" type="String" required="true" description="" />
+    <apex:attribute name="objectName" assignTo="{!objectNameParam}" type="String" required="true" description="" />
+    <apex:attribute name="mode" assignTo="{!modeParam}" type="String" required="false" description="" />
+    <apex:attribute name="sObject" assignTo="{!sObjectParam}" type="sObject" required="false" description="" />
+    {!Init}
+    <apex:pageBlock id="valuesTable">
+		<apex:form >
+			<apex:pageBlockSection columns="1">
+				<apex:pageMessages id="idMsgError"></apex:pageMessages>
+				<apex:pageBlockTable value="{!values}" var="value" >
+		    		<apex:repeat value="{!columns}" var="fieldName">
+		    			<apex:column >
+							<apex:facet name="header">{!mLabelFields[fieldName]}</apex:facet>
+							<apex:outputText value="{!value[fieldName]}"/>
+							
+							<apex:facet name="footer">
+		            			<apex:selectList value="{!mFieldValue[fieldName]}" size="1" required="true" rendered="{!IF(mode=='write' && showAddAndPicklist,true,false)}">
+		            				<apex:selectOptions value="{!mFieldOptions[fieldName]}"/>
+		            			</apex:selectList>
+							</apex:facet>
+							
+						</apex:column>
+					</apex:repeat>
+					<apex:column rendered="{!IF(mode=='write',true,false)}">
+						<apex:variable var="auxValue" value=""/>
+						<apex:repeat value="{!columns}" var="fieldName">
+							<apex:variable var="auxValue" value="{!auxValue + value[fieldName] + '-'}"/>
+						</apex:repeat>
+						
+						<apex:facet name="header"></apex:facet>
+						<apex:commandLink action="{!deleteValue}" value="Delete" rerender="valuesTable">
+							<apex:param name="valueToDelete" value="{!auxValue}" assignTo="{!valueToDelete}"/>
+						</apex:commandLink>
+						<apex:facet name="footer">
+			        		<apex:commandButton action="{!add}" value="Add" id="btnAdd" rerender="valuesTable" rendered="{!showAddAndPicklist}"/>    	
+						</apex:facet>
+					</apex:column>
+		    	</apex:pageBlockTable>
+			</apex:pageBlockSection>
+		</apex:form>
+	</apex:pageBlock>
+</apex:component>
