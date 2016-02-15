@@ -3,7 +3,7 @@
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
 
-[[Usage](#usage-examples) | [Know Issues/Todos](#known-issuestodos) | [Third Party Code](#third-party-code) | [Licence](#visualforce-tablegrid-license)
+[[Usage](#usage-examples) | [Know Issues/Todos](#known-issuestodos) | [Licence](#visualforce-advanced-picklist-license)
 
 Advanced Multipicklist is a free, open-source Force.com library, that provides users and developers a other form to see and work with multipicklist fields. 
 This component can be used as an advanced, highly configurable (by developer and user) replacement of <apex:selectOption> and fields into Standard Page Layouts.
@@ -48,7 +48,7 @@ you enough information to get started.
 
 ## Known Issues/Todos ##
 
----Under construction---
+Our current TODO list is being managed via <a href="https://github.com/Inakihu/visualforce-advanced-multipicklist/issues">GitHub Issues</a>
 
 ## Visualforce Advanced Picklist License ##
 
